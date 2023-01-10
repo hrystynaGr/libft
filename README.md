@@ -13,7 +13,7 @@ bzero|
 memcpy|
 memmove|
 strlcpy|
-strlcat|
+strlcat|✅ 
 toupper|
 tolower|
 strchr|

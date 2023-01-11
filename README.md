@@ -4,8 +4,8 @@ Name  | Status
 ------------- | -------------
 isalpha     |  ✅ 
 isdigit   |  ✅ 
-isalnum|
-isascii|
+isalnum|✅ 
+isascii|✅ 
 isprint| ✅ 
 strlen|✅ 
 memset|
@@ -22,7 +22,7 @@ strncmp|
 memchr|
 memcmp|
 strnstr|
-atoi|
+atoi|✅ 
 
 **Using malloc()**
 

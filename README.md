@@ -2,7 +2,7 @@
 
 Name  | Status
 ------------- | -------------
-isalpha     |  
+isalpha     |  ✅ 
 isdigit   | 
 isalnum|
 isascii|

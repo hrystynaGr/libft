@@ -6,7 +6,7 @@ isalpha     |  ✅
 isdigit   |  ✅ 
 isalnum|
 isascii|
-isprint|
+isprint| ✅ 
 strlen|✅ 
 memset|
 bzero|

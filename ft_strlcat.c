@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	int				i;
-	unsigned int	dest_size;
+	size_t				i;
+	size_t	dest_size;
 
 	i = 0;
 	dest_size = 0;

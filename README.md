@@ -3,7 +3,7 @@
 Name  | Status
 ------------- | -------------
 isalpha     |  ✅ 
-isdigit   | 
+isdigit   |  ✅ 
 isalnum|
 isascii|
 isprint|

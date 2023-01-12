@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkubik <kkubik@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 20:58:31 by kkubik            #+#    #+#             */
-/*   Updated: 2023/01/12 20:52:09 by kkubik           ###   ########.fr       */
+/*   Created: 2023/01/12 22:01:57 by kkubik            #+#    #+#             */
+/*   Updated: 2023/01/12 22:10:57 by kkubik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	sign;
-	int	res;
+#include <stdio.h>
 
-	i = 0;
-	sign = 1;
-	res = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
-	{
-		res *= 10;
-		res += str[i] - '0';
-		i++;
-	}
-	return (sign * res);
+int	toupper(int c);
+
+int	ft_toupper(int c)
+{
+	if ((c >= 'a' && c <= 'z'))
+		return (c - 32);
+	return (c);
 }
+
+// int main(void)
+// {
+//     printf("%d", ft_toupper('C'));
+//     return (0);
+// }

@@ -31,7 +31,10 @@ int	ft_atoi(const char *str)
 	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
 	{
 		res *= 10;
-		res += str[i] + '0';
+		//res += str[i] + '0';
+		// works incorrect, because str[i] returns decimal ascii code
+		// so we need to substract '0' (48 in decimal)
+		res += str[i] - '0';
 		i++;
 	}
 	return (sign * res);

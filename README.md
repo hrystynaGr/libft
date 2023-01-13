@@ -8,16 +8,16 @@ isalnum|✅
 isascii|✅ 
 isprint| ✅ 
 strlen|✅ 
-memset|
-bzero|
-memcpy|
-memmove|
+memset|✅ 
+bzero|✅ 
+memcpy|✅ 
+memmove|✅ 
 strlcpy|✅ 
 strlcat|✅ 
-toupper|
-tolower|
-strchr|
-strrchr|
+toupper|✅ 
+tolower| 
+strchr|✅ 
+strrchr|✅ 
 strncmp|
 memchr|
 memcmp|
@@ -28,5 +28,5 @@ atoi|✅
 
 Name  | Status
 ------------- | -------------
-calloc    |  
+calloc    |  ✅ 
 strdup   | 

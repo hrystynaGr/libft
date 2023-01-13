@@ -6,7 +6,7 @@
 /*   By: kkubik <kkubik@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 22:55:23 by kkubik            #+#    #+#             */
-/*   Updated: 2023/01/12 23:06:47 by kkubik           ###   ########.fr       */
+/*   Updated: 2023/01/13 16:54:49 by kkubik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@
 
 void	*ft_calloc(size_t nitems, size_t size);
 
-void	*calloc(size_t nitems, size_t size)
+void	*ft_calloc(size_t nitems, size_t size)
 {
 	char	*mem;
 	char	*start;
 
 	mem = (char *)malloc(sizeof(size) * nitems);
 	start = mem;
+	if (mem == NULL)
+		return (NULL);
 	while (nitems != 0)
 	{
 		//checked it with (can't figure out better way)

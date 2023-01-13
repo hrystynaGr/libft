@@ -6,7 +6,7 @@
 /*   By: kkubik <kkubik@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 22:31:59 by kkubik            #+#    #+#             */
-/*   Updated: 2023/01/12 23:08:39 by kkubik           ###   ########.fr       */
+/*   Updated: 2023/01/13 17:42:53 by kkubik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,6 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*getthere(const char *str, int c)
-{
-	while (c != 0)
-	{
-		str++;
-		c--;
-	}
-	return ((char *)str);
-}
-
 char	*ft_strrchr(const char *str, int c)
 {
 	size_t	len;
@@ -50,7 +40,7 @@ char	*ft_strrchr(const char *str, int c)
 	{
 		len--;
 		if (str[len] == c)
-			return (getthere(str, len));
+			return ((char *)(str + len));
 	}
 	return ((char *)0);
 }

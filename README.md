@@ -15,10 +15,10 @@ memmove|✅
 strlcpy|✅ 
 strlcat|✅ 
 toupper|✅ 
-tolower| 
+tolower| ✅ 
 strchr|✅ 
 strrchr|✅ 
-strncmp|
+strncmp|✅ 
 memchr|
 memcmp|
 strnstr|

@@ -6,7 +6,7 @@
 /*   By: kkubik <kkubik@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 19:58:44 by kkubik            #+#    #+#             */
-/*   Updated: 2023/01/12 20:55:42 by kkubik           ###   ########.fr       */
+/*   Updated: 2023/01/19 19:07:48 by kkubik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@
 
 void	*ft_memset(void *str, int c, size_t n);
 
-//Are we allowed to pass array of integers here?
 void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t	i;
 	char	*pnt;
 
 	i = 0;
-	//assigning a type to a void-type pointer
 	pnt = (char *)str;
 	while (n > i)
 	{

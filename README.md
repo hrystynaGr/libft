@@ -21,7 +21,7 @@ strrchr|✅
 strncmp|✅ 
 memchr|✅ 
 memcmp|✅ 
-strnstr|
+strnstr|✅ 
 atoi|✅ 
 
 **Using malloc()**

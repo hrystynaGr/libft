@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Did you know another way how to use size_t type?
-#include <stddef.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t n);
 

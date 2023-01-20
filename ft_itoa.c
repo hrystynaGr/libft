@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include  <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int	ft_count(long int num)
 {

@@ -14,7 +14,6 @@
 
 int	ft_isalnum(int x);
 
-
 //probably after we create makefile
 //there will be no need to include those two functions
 //directly into this file

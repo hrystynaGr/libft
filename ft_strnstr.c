@@ -29,11 +29,9 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		{
 			if (str[i + j] == '\0' && to_find[j] == '\0')
 				return ((char *)&str[i]);
-				//return ((char *)str + i);
 			j++;
 		}
 		if (to_find[j] == '\0')
-			// return ((char *)(str + i));
 			return ((char *)&str[i]);
 		i++;
 	}

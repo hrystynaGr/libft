@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkubik <kkubik@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 22:55:23 by kkubik            #+#    #+#             */
-/*   Updated: 2023/01/19 19:11:51 by kkubik           ###   ########.fr       */
+/*   Created: 2023/01/19 18:47:06 by kkubik            #+#    #+#             */
+/*   Updated: 2023/01/19 19:07:15 by kkubik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include  <stdlib.h>
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <unistd.h>
 
-void	*ft_calloc(size_t nitems, size_t size);
+void	ft_putstr_fd(char *s, int fd);
 
-void	*ft_calloc(size_t nitems, size_t size)
+size_t	ft_strlen(const char *str)
 {
-	char	*mem;
-	char	*start;
+	size_t	i;
 
-	mem = (char *)malloc(sizeof(size) * nitems);
-	start = mem;
-	if (mem == NULL)
-		return (NULL);
-	while (nitems != 0)
+	i = 0;
+	while (*str != '\0')
 	{
-		*mem = 0;
-		mem++;
-		nitems--;
+		str++;
+		i++;
 	}
-	return (start);
+	return (i);
 }
 
-// int main(void)
-// {
-//     puts(calloc(3, 1));
-//     return (0);
-// }
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (s != NULL)
+		write(fd, s, ft_strlen(s));
+}

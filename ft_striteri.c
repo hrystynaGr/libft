@@ -1,42 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkubik <kkubik@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 22:55:23 by kkubik            #+#    #+#             */
-/*   Updated: 2023/01/19 19:11:51 by kkubik           ###   ########.fr       */
+/*   Created: 2023/01/19 18:19:55 by kkubik            #+#    #+#             */
+/*   Updated: 2023/01/19 19:11:35 by kkubik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include  <stdlib.h>
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
-void	*ft_calloc(size_t nitems, size_t size);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
-void	*ft_calloc(size_t nitems, size_t size)
+// void	ft_toupper(unsigned int i, char *sym)
+// {		
+// 	if ((sym[i] >= 'a' && sym[i] <= 'z'))
+// 		sym[i] = sym[i] - 32;
+// 	printf("%c\n", sym[i]);
+// }
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*mem;
-	char	*start;
+	int	i;
 
-	mem = (char *)malloc(sizeof(size) * nitems);
-	start = mem;
-	if (mem == NULL)
-		return (NULL);
-	while (nitems != 0)
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i] != '\0')
 	{
-		*mem = 0;
-		mem++;
-		nitems--;
+		f(i, s);
+		i++;
 	}
-	return (start);
 }
 
-// int main(void)
+// int	main(void)
 // {
-//     puts(calloc(3, 1));
-//     return (0);
+// 	char		s[16] = "TyVoLe!";
+// 	ft_striteri (s, ft_toupper);
+// 	puts(s);
 // }

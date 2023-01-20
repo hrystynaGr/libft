@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_strlength(char *str)
+int	ft_strlength(const char *str)
 {
 	int	i;
 
@@ -24,7 +24,7 @@ int	ft_strlength(char *str)
 	return (i);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	char	*dest;
@@ -52,4 +52,5 @@ int	main(int argc, char *argv[])
 		printf("New one %s  %p \n", ft_strdup(argv[1]), ft_strdup(argv[1]));
 	}
 	return (0);
-}*/
+}
+*/

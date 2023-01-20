@@ -9,6 +9,7 @@
 /*   Updated: 2023/01/10 20:54:23 by hbalan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

@@ -11,9 +11,26 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (*str != '\0')
+	{
+		str++;
+		i++;
+	}
+	return (i);
+}
 
 char	*ft_strchr(const char *str, int c)
-{
+{	
+	if (c == '\0')
+		return ((char *)(str + (ft_strlen(str))));
 	while (*str != '\0')
 	{
 		if (*str == c)
@@ -22,14 +39,13 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return ((char *)0);
 }
-
 // int main(void)
 // {
 //     char str[] = "Anna, you get it, you go girl!";
-//     char c = '!';
+//     char c = '\0';
 //     puts(ft_strchr(str, c));
 
 //     char str1[] = "Anna, you get it, you go girl!";
-//     char c1 = '!';
+//     char c1 = '\0';
 //     puts(strchr(str1, c1));
 // }

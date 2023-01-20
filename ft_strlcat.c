@@ -29,3 +29,15 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_size] = '\0';
 	return (dest_size);
 }
+
+/*#include <string.h>
+#include <stdio.h>
+int	main(void)
+{
+	char str[] = "fnf";
+	char str2[] = "bye";
+
+	ft_strlcat(str, str2, 7);
+	printf("%s\n", str);
+	return (0);
+}*/

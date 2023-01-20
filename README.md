@@ -19,9 +19,9 @@ tolower| ✅
 strchr|✅ 
 strrchr|✅ 
 strncmp|✅ 
-memchr|
-memcmp|
-strnstr|
+memchr|✅ 
+memcmp|✅ 
+strnstr|✅ 
 atoi|✅ 
 
 **Using malloc()**

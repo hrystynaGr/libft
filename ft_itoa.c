@@ -12,48 +12,47 @@
 
 #include "libft.h"
 
-static int	ft_count(long int num)
+static long int	ft_count(int num)
 {
 	int	count;
 
 	count = 0;
-	if (num < 0)
+	if (num <= 0)
 	{
-		num *= -1;
-		count++;
+		count = 1;
 	}
-	while (num > 0)
+	while (num != 0)
 	{
-		num /= 10;
 		count++;
+		num /= 10;
 	}
 	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	int		num_count;
-	char	*str;
+	long int			num_count;
+	char				*str;
+	unsigned int		number;
 
 	num_count = ft_count(n);
-	str = malloc(num_count * sizeof(char) + 1);
+	str = (char *)malloc(sizeof(char) * (num_count + 1));
 	if (!str)
 		return (NULL);
 	str[num_count--] = '\0';
 	if (n == 0)
-	{
-		str = malloc(sizeof(char) * 2);
 		str[0] = '0';
-	}
 	if (n < 0)
 	{
 		str[0] = '-';
-		n = n * -1;
+		number = n * -1;
 	}
-	while (n > 0)
+	else
+		number = n;
+	while (number > 0)
 	{
-		str[num_count--] = n % 10 + '0';
-		n = n / 10;
+		str[num_count--] = number % 10 + '0';
+		number = number / 10;
 	}
 	return (str);
 }

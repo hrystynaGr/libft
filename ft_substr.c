@@ -10,39 +10,57 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+//#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
-	char	*srcp;
-	char	*destp;
 
 	i = 0;
-	srcp = (char *)src;
-	destp = (char *)dest;
-	while (i < n)
+	while (*str != '\0')
 	{
-		destp[i] = srcp[i];
+		str++;
 		i++;
 	}
-	return (dest);
+	return (i);
+}
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	if (size != 0)
+	{
+		size -= 1;
+		while (src[i] && (i < size))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (ft_strlen(src));
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void	*res;
+	char	*res;
 
-	res = (char *)malloc(sizeof(char) * len);
+	if (!s)
+		return (0);
+	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (res == NULL)
 		return (NULL);
-	return (ft_memcpy(res, s + start, len));
+	ft_strlcpy(res, s + start, (len + 1));
+	return (res);
 }
 
-// int	main(void)
-// {
-// 	char		str[16] = "This&is^the(str";
+/*int	main(void)
+{
+	char		str[16] = "This&is^the(str";
 
-// 	puts(ft_substr(str, 3, 0));
-// }
+	printf("%s\n", ft_substr(str, 3, 2));
+}*/

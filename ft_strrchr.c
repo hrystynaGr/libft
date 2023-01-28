@@ -13,21 +13,6 @@
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int c);
-//if you can came up with more elegant solution, feell free to rewrite
-//this lovely pece of sh&tty code <3
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (*str != '\0')
-	{
-		str++;
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_strrchr(const char *str, int c)
 {

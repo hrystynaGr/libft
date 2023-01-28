@@ -14,23 +14,6 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	size_t	i;
-	char	*srcp;
-	char	*destp;
-
-	i = 0;
-	srcp = (char *)src;
-	destp = (char *)dest;
-	while (i < n)
-	{
-		destp[i] = srcp[i];
-		i++;
-	}
-	return (dest);
-}
-
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	if (src <= dest)

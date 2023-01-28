@@ -11,33 +11,67 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlen(const char *str)
 {
-	size_t				i;
-	size_t				dest_size;
+	size_t	i;
 
 	i = 0;
-	dest_size = 0;
-	while (dest[dest_size])
-		dest_size++;
-	while (src[i] && (dest_size < (size - 1)))
+	while (*str != '\0')
 	{
-		dest[dest_size] = src[i];
-		dest_size++;
+		str++;
 		i++;
 	}
-	dest[dest_size] = '\0';
-	return (dest_size);
+	return (i);
 }
 
-/*#include <string.h>
-#include <stdio.h>
-int	main(void)
+//this works properly 
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char str[] = "fnf";
-	char str2[] = "bye";
+	size_t		i;
+	size_t		len;
 
-	ft_strlcat(str, str2, 7);
-	printf("%s\n", str);
-	return (0);
+	i = 0;
+	len = 0;
+	if (!dst && size == 0)
+		return (0);
+	if (dst == src)
+		return (0);
+	while (dst[len] && len < size)
+		len++;
+	i = len;
+	while (src[len - i] && len + 1 < size)
+	{
+		dst[len] = src[len - i];
+		len++;
+	}
+	if (i < size)
+		dst[len] = '\0';
+	return (i + ft_strlen(src));
+}
+//this solution has Abort error - I don't know why
+/*size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	dest_size;
+	size_t	src_size;
+
+	dest_size = ft_strlen(dst);
+	src_size = ft_strlen(src);
+	if (!dst && size == 0)
+		return (0);
+	if (dst == src)
+		return (0);
+	if (size <= dest_size)
+		return (size + src_size);
+	if (size != 0)
+	{
+		i = 0;
+		while (src[i] && i < (size - dest_size - 1))
+		{
+			dst[i + dest_size] = src[i];
+			i++;
+		}
+		dst[i + dest_size] = '\0';
+	}
+	return (dest_size + src_size);
 }*/

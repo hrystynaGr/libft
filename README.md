@@ -38,7 +38,7 @@ Name  | Status
 ft_substr    |  ✅ 
 ft_strjoin   | ✅ 
 ft_strtrim  | ✅ 
-ft_split  | 
+ft_split  | ✅ 
 ft_itoa  | ✅ 
 ft_strmapi   |✅  
 ft_striteri  | ✅ 
@@ -51,7 +51,7 @@ ft_putnbr_fd| ✅
 **Bonus**
 Name  | Status
 ------------- | -------------
-ft_lstnew   |  
+ft_lstnew   |  ✅ 
 ft_lstadd_front   | 
 ft_lstsize | 
 ft_lstlast | 

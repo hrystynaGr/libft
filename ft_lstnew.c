@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbalan <hbalan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbalan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 12:47:17 by hbalan            #+#    #+#             */
-/*   Updated: 2023/01/31 12:47:20 by hbalan           ###   ########.fr       */
+/*   Created: 2023/02/01 13:50:53 by hbalan            #+#    #+#             */
+/*   Updated: 2023/02/01 13:50:56 by hbalan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
@@ -18,8 +18,8 @@ t_list	*ft_lstnew(void *content)
 
 	new = malloc(sizeof(t_list));
 	if (!new)
-		return (0);
+		return (NULL);
 	new->content = content;
-	new->next = 0;
+	new->next = NULL;
 	return (new);
 }
